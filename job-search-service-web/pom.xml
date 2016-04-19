@@ -5,6 +5,7 @@
 
 	<groupId>com.jobsearch</groupId>
 	<artifactId>job-search-service-web</artifactId>
+    <packaging>jar</packaging>
 
 	<name>Job Search Service - Web</name>
 
@@ -37,6 +38,37 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>com.coderplus.maven.plugins</groupId>
+				<artifactId>copy-rename-maven-plugin</artifactId>
+				<version>1.0</version>
+				<configuration>
+					<sourceFile>${project.build.directory}/${project.build.finalName}.jar</sourceFile>
+					<destinationFile>${project.build.directory}/${project.parent.artifactId}.jar</destinationFile>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.5</version>
+				<configuration>
+					<imageName>${docker.image.prefix}/${project.parent.artifactId}</imageName>
+					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+					<!--<dockerHost>https://192.168.99.100:2376</dockerHost>-->
+					<imageTags>
+						<imageTag>${project.version}</imageTag>
+					</imageTags>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.parent.artifactId}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
