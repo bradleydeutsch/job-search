@@ -7,7 +7,7 @@ public class WebApplication {
 
 	public static void main(String[] args) {
 
-		new SpringApplicationBuilder(JobSearchServiceConfiguration.class)
+		new SpringApplicationBuilder(JobSearchServiceConfiguration.class, SwaggerConfiguration.class)
                 .bannerMode(Banner.Mode.LOG)
                 .logStartupInfo(true)
                 .run(args);

@@ -10,16 +10,16 @@ import org.mockito.runners.MockitoJUnitRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
-public class JobSearchControllerUnitTest {
+public class HealthControllerUnitTest {
 
-    private JobSearchController sut;
+    private HealthController sut;
 
     @Mock
     private GitRepositoryState gitRepositoryState;
 
     @Before
     public void before() {
-        sut = new JobSearchController(gitRepositoryState);
+        sut = new HealthController(gitRepositoryState);
     }
 
     @Test

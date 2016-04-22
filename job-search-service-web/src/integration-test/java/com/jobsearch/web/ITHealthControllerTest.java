@@ -18,7 +18,7 @@ import static org.springframework.http.HttpStatus.OK;
 @SpringApplicationConfiguration(classes = {JobSearchServiceConfiguration.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebIntegrationTest(randomPort = true)
-public class ITJobSearchControllerTest {
+public class ITHealthControllerTest {
 
     @Value("${local.server.port}")
     private int serverPort;
