@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jobsearch</groupId>
-	<artifactId>job-search-service-web</artifactId>
+	<artifactId>job-service-web</artifactId>
     <packaging>jar</packaging>
 
-	<name>Job Search Service - Web</name>
+	<name>Job Service - Web</name>
 
 	<parent>
 		<groupId>com.jobsearch</groupId>
-		<artifactId>job-search-service</artifactId>
+		<artifactId>job-service</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

@@ -29,8 +29,8 @@ public class SwaggerConfiguration {
     private ApiInfo apiInfo() {
 
         return new ApiInfoBuilder()
-                .title("efC Job Search Service - Swagger API")
-                .description("These are the eFC Job Search Service endpoints.")
+                .title("efC Job Service - Swagger API")
+                .description("These are the eFC Job Service endpoints.")
                 .version("v1")
                 .build();
     }

@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jobsearch</groupId>
-	<artifactId>job-search-service</artifactId>
+	<artifactId>job-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Job Search Service</name>
+	<name>Job Service</name>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -18,7 +18,7 @@
 	</parent>
 
 	<modules>
-		<module>job-search-service-web</module>
+		<module>job-service-web</module>
 	</modules>
 
 	<properties>
